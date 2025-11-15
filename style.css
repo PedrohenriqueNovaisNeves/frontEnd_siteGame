@@ -1,8 +1,213 @@
-body { background: #121212; color: #f5f5f5; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
-nav { background: #1f1f1f; padding: 1rem; position: sticky; top: 0; }
-nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; }
-nav li { margin: 0 1rem; }
-nav a { color: #f5f5f5; text-decoration: none; font-weight: bold; }
-nav a:hover { color: #00bcd4; }
-section { display: none; padding: 3rem; }
-section.active { display: block; }
+/* --------------------
+     BASE
+-------------------- */
+body {
+  background: #111;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* --------------------
+      NAVBAR
+-------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1c1c1c;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  color: #00eaff;
+}
+
+/* Ícone menu mobile */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* --------------------
+      SECTIONS
+-------------------- */
+section {
+  display: none;
+  padding: 2.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section.active {
+  display: block;
+}
+
+/* --------------------
+      BANNER
+-------------------- */
+.banner {
+  background: url('img1.png') center/cover no-repeat;
+  padding: 6rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botão Jogar */
+.btn-jogar {
+  margin-top: 2rem;
+  background: #00eaff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-jogar:hover {
+  background: #00c2c9;
+}
+
+/* --------------------
+      CONTAINERS
+-------------------- */
+.container {
+  margin-top: 3rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* --------------------
+      CARDS
+-------------------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
+}
+
+/* --------------------
+      GALERIA
+-------------------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+/* --------------------
+      JOGO
+-------------------- */
+.game-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+/* --------------------
+      CREDITS
+-------------------- */
+.tech-list li {
+  margin: 0.5rem 0;
+}
+
+/* --------------------
+      FOOTER
+-------------------- */
+footer {
+  background: #181818;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  color: #aaa;
+}
+
+/* --------------------
+      RESPONSIVIDADE
+-------------------- */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .banner h1 {
+    font-size: 2.4rem;
+  }
+}
