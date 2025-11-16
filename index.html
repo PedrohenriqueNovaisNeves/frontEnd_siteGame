@@ -44,19 +44,39 @@
   </ul>
 </nav>
 
-
 <!-- ======================
        INÍCIO / HOME
 ====================== -->
 <section id="inicio" class="active">
 
 <header class="hero">
-  <img src="images/image-game-banner.png" alt="Banner">
-  <div class="hero-content">
-  <p class="subtitle">Supere obstáculos em uma aventura sombria na floresta.</p>
-  <button class="btn-jogar" onclick="showSection('Jogo')">Jogar Agora</button>
+
+  <!-- CAMADA 1 – FUNDO ANIMADO OU VÍDEO -->
+  <div class="layer bg">
+    <img src="images/parallax/banner-bg.png" alt="">
+    <!-- ou vídeo: 
+    <video src="images/banner-bg.mp4" autoplay loop muted></video> 
+    -->
   </div>
+
+  <!-- CAMADA 2 – ELEMENTOS DO CENÁRIO (ARVORES, NEBLINA, PARTÍCULAS) -->
+  <div class="layer mid">
+    <img src="images/parallax/banner-mid.png" alt="">
+  </div>
+
+  <!-- CAMADA 3 – PLATAFORMA OU FRAGMENTOS EM PRIMEIRO PLANO -->
+  <div class="layer front">
+    <img src="images/parallax/banner-front-p-plataform.png" alt="">
+  </div>
+
+  <!-- CAMADA 4 – TEXTO DO BANNER -->
+  <div class="hero-content">
+    <p class="subtitle">Supere obstáculos em uma aventura sombria na floresta.</p>
+    <button class="btn-jogar" onclick="showSection('Jogo')">Jogar Agora</button>
+  </div>
+
 </header>
+
 
 <!-- Sobre -->
 <div class="container">
@@ -101,7 +121,7 @@
   <h2>Screenshots</h2>
 
   <div class="gallery">
-    <img src="img1.png" alt="Cena do jogo">
+    <img src="images/game-scenes/scene1.png" alt="Cena do jogo">
     <img src="img2.png" alt="Cena do jogo">
     <img src="img3.png" alt="Cena do jogo">
   </div>
@@ -120,26 +140,26 @@
 
     <div class="cards credits">
       <div class="card">
-        <h3>Nome</h3>
-        <h3>Nome</h3>
+        <h3>Bruno Urccella Wiss</h3>
+        <h3>D'Elia</h3>
         <p><strong>Função:</strong> Gamer Developers</p>
       </div>
 
       <div class="card">
-        <h3>Nome</h3>
-        <h3>Nome</h3>
+        <h3>Lucas</h3>
+        <h3>Gustavo Furnari da Silva</h3>
         <p><strong>Função:</strong> UX & UI Designers</p>
       </div>
 
       <div class="card">
-        <h3>Nome</h3>
-        <h3>Nome</h3>
+        <h3>Ellen Cristine do Vale Cruz</h3>
+        <h3>Pedro Henrique</h3>
         <p><strong>Função:</strong> Front-End Developers</p>
       </div>
 
       <div class="card">
-        <h3>Nome</h3>
-        <h3>Nome</h3>
+        <h3>Juan Julio Deodato</h3>
+        <h3>Sérgio Borges da Silva</h3>
         <p><strong>Função:</strong> Testers</p>
       </div>
     </div>
