@@ -5,15 +5,15 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/icones/favicon-32x32.png">
 <link rel="icon"  type="image/x-icon" href="images/icones/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="images/icones/apple-touch-icon.png">
-<!-- Ícones para PWA / Android -->
 <link rel="icon" type="image/png" sizes="192x192" href="images/icones/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="images/icones/android-chrome-512x512.png">
 <link rel="manifest" href="/site.webmanifest"> 
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NOMEDOJOGO – Page</title>
 
-<!-- Google Font -->
+<title>NOME DA EQUIPE - NOMEDOJOGO</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
@@ -21,11 +21,18 @@
 
 <body>
 
+<!-- ============================
+     CRIATURA NA LATERAL ESQUERDA
+============================= -->
+<div class="creature-left wind-effect"> <!-- ADICIONADO -->
+  <img src="images/personagem-lateral.png" alt="criatura-lateral-esquerda"> 
+</div>
+
+
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">NOMEDOJOGO</div>
 
-  <!-- Ícone Hamburguer -->
   <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
     ☰
   </button>
@@ -43,94 +50,96 @@
 ====================== -->
 <section id="inicio" class="active">
 
-  <!-- Banner -->
-  <div class="banner">
-    <h1 class="title">NOMEDOJOGO</h1>
-    <p class="subtitle">Supere obstáculos em uma aventura sombria na floresta.</p>
-    <button class="btn-jogar" onclick="showSection('Jogo')">Jogar Agora</button>
+<header class="hero">
+  <img src="images/image-game-banner.png" alt="Banner">
+  <div class="hero-content">
+  <p class="subtitle">Supere obstáculos em uma aventura sombria na floresta.</p>
+  <button class="btn-jogar" onclick="showSection('Jogo')">Jogar Agora</button>
   </div>
+</header>
 
-  <!-- Seção Sobre o Jogo -->
-  <div class="container">
-    <h2>Sobre o Jogo</h2>
-    <p>
-      NOMEDOJOGO é um jogo de plataforma em que você controla uma criatura das sombras 
-      em um ambiente misterioso e mágico. O objetivo é superar obstáculos, resolver 
-      pequenos desafios e avançar por diferentes cenários enquanto desvenda a história 
-      oculta da floresta.
-    </p>
-  </div>
+<!-- Sobre -->
+<div class="container">
+  <h2>Sobre o Jogo</h2>
+  <p>
+    NOMEDOJOGO é um jogo de plataforma em que você controla uma criatura das sombras 
+    em um ambiente misterioso e mágico. O objetivo é superar obstáculos, resolver 
+    pequenos desafios e avançar por diferentes cenários enquanto desvenda a história 
+    oculta da floresta.
+  </p>
+</div>
 
-  <!-- Características -->
-  <div class="container">
-    <h2>Características</h2>
+<!-- Cards -->
+<div class="container">
+  <h2>Características</h2>
 
-    <div class="cards">
-      <div class="card">
-        <h3>🌑 Atmosfera Única</h3>
-        <p>Visual inspirado em luz e sombra, criando um ambiente imersivo.</p>
-      </div>
+  <div class="cards">
+    <div class="card">
+      <h3>🌑 Atmosfera Única</h3>
+      <p>Visual inspirado em luz e sombra.</p>
+    </div>
 
-      <div class="card">
-        <h3>🎮 Jogabilidade Intuitiva</h3>
-        <p>Movimentação fluida e controles simples para qualquer jogador.</p>
-      </div>
+    <div class="card">
+      <h3>🎮 Jogabilidade Intuitiva</h3>
+      <p>Controles simples para qualquer jogador.</p>
+    </div>
 
-      <div class="card">
-        <h3>🧩 Desafios Criativos</h3>
-        <p>Plataformas, obstáculos, mira e elementos interativos.</p>
-      </div>
+    <div class="card">
+      <h3>🧩 Desafios Criativos</h3>
+      <p>Plataformas, obstáculos e interações.</p>
+    </div>
 
-      <div class="card">
-        <h3>🖼 Cenários Belos</h3>
-        <p>Cenários inspirados em natureza e fantasia, com arte estilizada.</p>
-      </div>
+    <div class="card">
+      <h3>🖼 Cenários Belos</h3>
+      <p>Arte inspirada em natureza e fantasia.</p>
     </div>
   </div>
+</div>
 
-  <!-- Galeria de Imagens -->
-  <div class="container">
-    <h2>Screenshots</h2>
+<!-- Galeria -->
+<div class="container">
+  <h2>Screenshots</h2>
 
-    <div class="gallery">
-      <img src="img1.png" alt="Cena do jogo NOMEDOJOGO">
-      <img src="img2.png" alt="Cena do jogo NOMEDOJOGO">
-      <img src="img3.png" alt="Cena do jogo NOMEDOJOGO">
-    </div>
+  <div class="gallery">
+    <img src="img1.png" alt="Cena do jogo">
+    <img src="img2.png" alt="Cena do jogo">
+    <img src="img3.png" alt="Cena do jogo">
   </div>
+</div>
 
 </section>
 
+
 <!-- ======================
-        PÁGINA DE CRÉDITOS
+       PÁGINA DE CRÉDITOS
 ====================== -->
 <section id="sobre">
   <div class="container">
     <h1>Créditos & Equipe</h1>
-    <p>A seguir estão os integrantes responsáveis pelo desenvolvimento do jogo.</p>
+    <p>Integrantes responsáveis pelo jogo:</p>
 
     <div class="cards credits">
       <div class="card">
-        <h3>Bruno</h3>
-        <h3>D'Elia</h3>
+        <h3>Nome</h3>
+        <h3>Nome</h3>
         <p><strong>Função:</strong> Gamer Developers</p>
       </div>
 
       <div class="card">
-        <h3>Gustavo Furnari da Silva</h3>
-        <h3>Lucas</h3>
+        <h3>Nome</h3>
+        <h3>Nome</h3>
         <p><strong>Função:</strong> UX & UI Designers</p>
       </div>
 
       <div class="card">
-        <h3>Ellen Cristine do Vale Cruz</h3>
-        <h3>Pedro Henrique</h3>
+        <h3>Nome</h3>
+        <h3>Nome</h3>
         <p><strong>Função:</strong> Front-End Developers</p>
       </div>
 
       <div class="card">
-        <h3>Juan</h3>
-        <h3>Sérgio</h3>
+        <h3>Nome</h3>
+        <h3>Nome</h3>
         <p><strong>Função:</strong> Testers</p>
       </div>
     </div>
@@ -147,20 +156,15 @@
 
 
 <!-- ======================
-        PÁGINA DO JOGO
+       PÁGINA DO JOGO
 ====================== -->
 <section id="Jogo">
   <h1>Jogo</h1>
 
-  <p>Seu jogo WebGL vai aqui:</p>
-
   <div class="game-container">
-    <!-- Quando exportar do Unity, cole aqui o template WebGL -->
     <p style="opacity:0.7">[ Área reservada para o WebGL ]</p>
   </div>
-
 </section>
-
 
 <footer>
   © 2025 NOMEDOJOGO – Todos os direitos reservados
