@@ -125,18 +125,90 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #1c1c1c;
-  padding: 0.20rem 1.5rem;
-  height: 30px;
-  position: sticky;
+
+  position: fixed;
   top: 0;
-  z-index: 1000;
-  margin-bottom: 0;
+  width: 100%;
+  z-index: 999;
+
+  padding: 0.45rem 1.4rem;
+
+  background: rgba(5, 10, 10, 0.75);
+  backdrop-filter: blur(6px);
 }
 
+.navbar-borders {
+  position: relative;
+}
+
+.navbar-borders::before,
+.navbar-borders::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 200, 0.65) 0%,
+    rgba(255, 255, 200, 0.3) 25%,
+    rgba(255, 255, 200, 0.05) 70%,
+    rgba(255, 255, 200, 0) 100%
+  );
+}
+
+.navbar-borders::before {
+  top: 0;
+}
+.navbar-borders::after {
+  bottom: 0;
+}
+
+.navbar a {
+  color: #f7f3da;
+  text-shadow: 0 0 2px rgba(0,0,0,0.9);
+  font-weight: 600;
+}
+
+
+
+.navbar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0 40px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  opacity: 1;
+}
+
+.menu-item .menu-icon {
+  width: 18px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.menu-item.active .menu-icon {
+  opacity: 1;
+}
+
+
 .logo {
+  margin-left: 25px;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .nav-links {
@@ -357,10 +429,15 @@ footer {
 
 .hero {
   position: relative;
+  top: 10px; /* move 10px para baixo */
+  left: 20px; /* move 20px para a direita */
   width: 100%;
   height: 95vh;
   overflow: hidden;
+  padding: 0; /* REMOVIDO */
+  background-size: auto 200%; /* AUMENTADO PARA 200% */
 }
+
 
 .hero .layer {
   position: absolute;

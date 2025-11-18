@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NOME DA EQUIPE - NOMEDOJOGO</title>
+<title>NOMEDOJOGO</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -24,7 +24,7 @@
 <!-- ============================
      CRIATURA NA LATERAL ESQUERDA
 ============================= -->
-<div class="creature-left wind-effect"> <!-- ADICIONADO -->
+<div class="creature-left wind-effect">
   <img src="images/personagem-lateral.png" alt="criatura-lateral-esquerda"> 
 </div>
 
@@ -38,9 +38,16 @@
   </button>
 
   <ul class="nav-links">
-    <li><a href="#" onclick="showSection('inicio')">Início</a></li>
-    <li><a href="#" onclick="showSection('sobre')">Créditos</a></li>
-    <li><a href="#" onclick="showSection('Jogo')">Jogo</a></li>
+    <li class="menu-item active">
+      <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
+      <a href="#" onclick="showSection('inicio')">Início</a>
+    </li>
+    <li class="menu-item">
+      <img src="images/icones/tiro-icon.png" class="menu-icon" alt= "Ícone de Tiro">
+      <a href="#" onclick="showSection('sobre')">Créditos</a></li>
+    <li class="menu-item">
+      <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
+      <a href="#" onclick="showSection('Jogo')">Jogo</a></li>
   </ul>
 </nav>
 
@@ -126,7 +133,6 @@
     <img src="img3.png" alt="Cena do jogo">
   </div>
 </div>
-
 </section>
 
 
@@ -189,6 +195,14 @@
 <footer>
   © 2025 NOMEDOJOGO – Todos os direitos reservados
 </footer>
+
+<footer id="suporte">
+    <h3>Suporte</h3>
+    <p>💬 Atendimento: nomedojogo@equipecontrole.com</p>
+    <p>⏰ Horário: Seg–Sex, 8h às 18h</p>
+    <p>❓ FAQ: <a href="#">Clique para acessar</a></p>
+    <p>⚙ Suporte técnico: <a href="#">Abrir chamado</a></p>
+  </footer>
 
 <script src="script.js"></script>
 </body>
