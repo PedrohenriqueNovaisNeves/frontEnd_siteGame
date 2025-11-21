@@ -121,6 +121,9 @@ body {
 /* --------------------
       NAVBAR
 -------------------- */
+/* --------------------
+      NAVBAR
+-------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -131,10 +134,10 @@ body {
   width: 100%;
   z-index: 999;
 
-  padding: 0.45rem 1.4rem;
+  padding: 1rem 0; /* Mantém a altura grossa */
 
-  background: rgba(5, 10, 10, 0.75);
-  backdrop-filter: blur(6px);
+  background: rgba(5, 10, 10, 0.85); /* Preto com 85% de opacidade — meio transparente */
+  backdrop-filter: blur(8px); /* Suaviza o fundo, mantendo legibilidade */
 }
 
 .navbar-borders {
@@ -181,6 +184,14 @@ body {
   padding: 0 40px;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.4rem; /* mantém o padding original da navbar */
+}
+
 .menu-item {
   display: flex;
   align-items: center;
@@ -189,32 +200,58 @@ body {
   transition: 0.2s;
 }
 
+.menu-item:hover a {
+  color: #fff;
+  text-shadow: 
+    0 0 4px rgba(255, 255, 200, 0.5),
+    0 0 8px rgba(255, 255, 200, 0.2);
+  transform: scale(1.04); /* Aumento sutil */
+}
+
 .menu-item:hover,
 .menu-item.active {
   opacity: 1;
 }
 
 .menu-item .menu-icon {
-  width: 18px;
+  width: 24px; /* Aumentei de 18px para 24px */
+  height: auto; /* Mantém proporção */
   opacity: 0;
-  transition: opacity .2s;
+  transition: all 0.25s ease-in-out;
+  filter: drop-shadow(0 0 2px rgba(255,255,200,0.3)); /* Brilho suave para destacar */
 }
 
+.menu-item:hover .menu-icon,
 .menu-item.active .menu-icon {
   opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(255,255,200,0.6)); /* Brilho mais forte ao hover/ativo */
 }
 
 
 .logo {
   margin-left: 25px;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #f7f3da;
+  text-shadow: 0 0 2px rgba(0,0,0,0.9);
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease-in-out; /* Animação suave */
+}
+
+.logo:hover {
+  color: #fff;
+  text-shadow: 
+    0 0 4px rgba(255, 255, 200, 0.6),
+    0 0 8px rgba(255, 255, 200, 0.3);
+  transform: scale(1.05); /* Aumenta 5% */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0 auto; /* CENTRALIZA OS LINKS DENTRO DO ESPAÇO DISPONÍVEL */
+  padding: 0 40px;
 }
 
 .nav-links li a {
@@ -453,6 +490,39 @@ footer {
   height: 110%;
   object-fit: cover;
   object-position: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero .layer {
+  display: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.75)
+  );
+  z-index: 2; /* Aumentei para 2 para ficar acima da imagem */
 }
 
 /* profundidade */
