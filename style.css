@@ -5,12 +5,8 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
+body, p, li {
+  line-height: 1.8;
 }
 
 .hero::after {
@@ -20,29 +16,10 @@ html, body {
   background: radial-gradient(
     rgba(0, 0, 0, 0.25),
     rgba(0, 0, 0, 0.75)
-  );
-  z-index: 1;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  text-align: center;
-  color: #fff;
-  max-width: 80%;
-  text-shadow: 0 6px 30px rgba(0,0,0,0.8);
-  animation: fadeInUp 1.2s ease-out;
-}
-
-.hero-content h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
+    );
+    z-index: 1;
+  }
+  
 .hero-content p {
   font-size: 1.25rem;
   margin-top: 1rem;
@@ -60,26 +37,10 @@ html, body {
   }
 }
 
-.hero-content .btn-jogar {
-  margin-top: 2rem;
-  background: #F8AF4B;
-  border: none;
-  padding: 1rem 2.6rem;
-  border-radius: 10px;
-  font-size: 1.3rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.25s;
-}
-
-.hero-content .btn-jogar:hover {
-  background: #d88e32;
-  transform: scale(1.05);
-}
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   position: fixed;
@@ -88,7 +49,7 @@ html, body {
   z-index: 999;
 
   padding: 1rem 0; /* Mantém a altura grossa */
-
+  
   background: rgba(5, 10, 10, 0.85); /* Preto com 85% de opacidade — meio transparente */
   backdrop-filter: blur(8px); /* Suaviza o fundo, mantendo legibilidade */
 }
@@ -104,14 +65,14 @@ html, body {
   left: 0;
   width: 100%;
   height: 1px;
-
+  
   background: radial-gradient(
     ellipse at center,
     rgba(255, 255, 200, 0.65) 0%,
     rgba(255, 255, 200, 0.3) 25%,
     rgba(255, 255, 200, 0.05) 70%,
     rgba(255, 255, 200, 0) 100%
-  );
+    );
 }
 
 .navbar-borders::before {
@@ -137,7 +98,7 @@ html, body {
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 0 1.4rem; /* mantém o padding original da navbar */
@@ -178,31 +139,13 @@ html, body {
   filter: drop-shadow(0 0 4px rgba(255,255,200,0.6)); /* Brilho mais forte ao hover/ativo */
 }
 
-
-.logo {
-  margin-left: 25px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #f7f3da;
-  text-shadow: 0 0 2px rgba(0,0,0,0.9);
-  letter-spacing: 0.5px;
-  transition: all 0.25s ease-in-out; /* Animação suave */
-}
-
-.logo:hover {
-  color: #fff;
-  text-shadow: 
-    0 0 4px rgba(255, 255, 200, 0.6),
-    0 0 8px rgba(255, 255, 200, 0.3);
-  transform: scale(1.05); /* Aumenta 5% */
-}
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
   margin: 0 auto; /* CENTRALIZA OS LINKS DENTRO DO ESPAÇO DISPONÍVEL */
   padding: 0 40px;
+  justify-content: center;
 }
 
 .nav-links li a {
@@ -280,14 +223,15 @@ h2 {
 -------------------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
+  padding: 0 1rem;
 }
 
 .card {
   background: #1a1a1a;
-  padding: 1.5rem;
+  padding: 0 1rem;
   border-radius: 12px;
   text-align: center;
   border: 1px solid #333;
@@ -354,8 +298,6 @@ footer {
     border: none;
     cursor: pointer;
   }
-
-
   /* hero */
   .hero {
     height: 75vh;
@@ -367,6 +309,20 @@ footer {
 
   .hero-content p {
     font-size: 1rem;
+  }
+}
+
+/* Telas médias (tablets) */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+  }
+}
+
+/* Telas pequenas (celulares) */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 card por linha */
   }
 }
 
@@ -407,7 +363,7 @@ footer {
 .creature-left.wind-effect video {
   animation:
     eyeGlow 3s ease-in-out infinite alternate,
-    wind 3.5s ease-in-out infinite alternate;
+    wind 2.1s ease-in-out infinite alternate;
 }
 
 @keyframes wind {
@@ -447,19 +403,20 @@ footer {
 }
 
 /* ------ Estrutura ------ */
+.hero .game-title {
+  z-index: 60; 
+  font-size: 5rem;
+  font-family: 'Cinzel Decorative', serif;
+  color: #090808;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  margin-bottom: 1rem;
+}
 
 .hero {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-}
-
-.hero .layer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .hero-background {
@@ -469,7 +426,6 @@ footer {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1;
 }
 
 .hero-background img {
@@ -489,14 +445,16 @@ footer {
     height: 75vh;
   }
 
-  .hero-content h1 {
-    font-size: 2.4rem;
+  .hero-content {
+      position: absolute;
+      z-index: 10; 
   }
 
   .hero-content p {
     font-size: 1rem;
   }
 }
+
 
 body {
   color: #f5f5f5;
@@ -506,7 +464,8 @@ body {
   backdrop-filter: blur(0px);
   font-family: "Poppins", sans-serif;
   margin: 0;
-  padding: 0
+  padding: 0;
+  z-index: -3;
 }
 
 
@@ -524,8 +483,10 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("images/parallax/banner-front-p-plataform.png") no-repeat center;
+  background: url("images/parallax/image.png") no-repeat center;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 0.3;
   z-index: -1;
+  mix-blend-mode: lighten;
+  filter: blur(1px);
 }

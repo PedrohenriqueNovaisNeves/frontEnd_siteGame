@@ -32,3 +32,8 @@ document.querySelectorAll(".menu-item").forEach(item => {
     item.classList.add("active");
   });
 });
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  document.querySelector('.hero-background').style.transform = `translateY(${scrolled * 0.3}px)`;
+});
