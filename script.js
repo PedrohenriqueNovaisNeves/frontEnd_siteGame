@@ -1,4 +1,4 @@
-// Mostrar seções
+// Mostrar seções 
 function showSection(id) {
   document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
   document.getElementById(id).classList.add("active");
@@ -17,16 +17,15 @@ function toggleMenu() {
 window.addEventListener("scroll", function() {
   const s = window.scrollY;
 
-  document.querySelector(".bg").style.transform =
-    `translateY(${s * 0.15}px)`;
+  document.querySelectorAll(".layer").forEach(layer => {
+    const speed = layer.getAttribute("data-speed");
+    const translateY = scrollY * (speed / 100);
+    layer.style.transform = `translateY(${translateY}px)`;
+  });
 
-  document.querySelector(".mid").style.transform =
-    `translateY(${s * 0.10}px)`;
-
-  document.querySelector(".front").style.transform =
-    `translateY(${s * 0.05}px)`;
 });
 
+// Ativar destaque no menu
 document.querySelectorAll(".menu-item").forEach(item => {
   item.addEventListener("click", () => {
     document.querySelectorAll(".menu-item").forEach(i => i.classList.remove("active"));
