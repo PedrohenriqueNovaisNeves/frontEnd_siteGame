@@ -3,8 +3,22 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #f5f5f5;
+  backdrop-filter: blur(0px);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+main {
+  flex: 1;
+}
 body, p, li {
   line-height: 1.8;
 }
@@ -37,7 +51,6 @@ body, p, li {
   }
 }
 
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -48,10 +61,10 @@ body, p, li {
   width: 100%;
   z-index: 999;
 
-  padding: 1rem 0; /* Mantém a altura grossa */
+  padding: 1rem 0;
   
-  background: rgba(5, 10, 10, 0.85); /* Preto com 85% de opacidade — meio transparente */
-  backdrop-filter: blur(8px); /* Suaviza o fundo, mantendo legibilidade */
+  background: rgba(5, 10, 10, 0.85); 
+  backdrop-filter: blur(8px); 
 }
 
 .navbar-borders {
@@ -101,7 +114,7 @@ body, p, li {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0 1.4rem; /* mantém o padding original da navbar */
+  padding: 0 1.4rem;
 }
 
 .menu-item {
@@ -117,7 +130,7 @@ body, p, li {
   text-shadow: 
     0 0 4px rgba(255, 255, 200, 0.5),
     0 0 8px rgba(255, 255, 200, 0.2);
-  transform: scale(1.04); /* Aumento sutil */
+  transform: scale(1.04);
 }
 
 .menu-item:hover,
@@ -126,24 +139,24 @@ body, p, li {
 }
 
 .menu-item .menu-icon {
-  width: 24px; /* Aumentei de 18px para 24px */
-  height: auto; /* Mantém proporção */
+  width: 24px;
+  height: auto;
   opacity: 0;
   transition: all 0.25s ease-in-out;
-  filter: drop-shadow(0 0 2px rgba(255,255,200,0.3)); /* Brilho suave para destacar */
+  filter: drop-shadow(0 0 2px rgba(255,255,200,0.3)); 
 }
 
 .menu-item:hover .menu-icon,
 .menu-item.active .menu-icon {
   opacity: 1;
-  filter: drop-shadow(0 0 4px rgba(255,255,200,0.6)); /* Brilho mais forte ao hover/ativo */
+  filter: drop-shadow(0 0 4px rgba(255,255,200,0.6));
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0 auto; /* CENTRALIZA OS LINKS DENTRO DO ESPAÇO DISPONÍVEL */
+  margin: 0 auto;
   padding: 0 40px;
   justify-content: center;
 }
@@ -201,6 +214,8 @@ section {
   padding: 2.5rem;
   max-width: 1000px;
   margin: auto;
+  position: relative;
+  z-index: 10;
 }
 
 section.active {
@@ -218,6 +233,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.descricao-jogo{
+  font-size: 20px;
+  font-family: "Poppins", Arial, sans-serif;
+}
 /* --------------------
       CARDS
 -------------------- */
@@ -265,6 +284,149 @@ h2 {
   border: 1px solid #333;
   text-align: center;
 }
+.instructions-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.instructions-box {
+  max-width: 320px;
+  width: 90%;
+
+  /* VISIBILIDADE MELHORADA */
+  background: rgba(0, 0, 0, 0.65); 
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+
+  padding: 25px 28px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.38);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.65);
+
+  /* POSIÇÃO NO DESKTOP */
+  position: fixed;
+  right: 40px;
+  top: 130px;
+  z-index: 20; 
+}
+
+
+.instructions-box h2 {
+  font-size: 1.9rem;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.instr-text {
+  opacity: 0.85;
+  line-height: 1.6;
+  margin: 10px 0 25px;
+}
+
+.instr-subtitle {
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+.instr-category {
+  margin-top: 18px;
+  color: #ffe9a9;
+}
+
+.instr-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.instr-list li {
+  margin: 6px 0;
+  padding-left: 14px;
+  position: relative;
+  opacity: 0.9;
+  line-height: 1.55;
+}
+
+.instr-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ffd37c;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .instructions-box {
+    position: static;        
+    margin: 20px auto;
+    width: 95%;
+    max-width: 500px;
+
+    background: rgba(0, 0, 0, 0.55);
+    padding: 22px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.controls-card {
+  max-height: 65vh;  /* evita subir demais */
+  overflow-y: auto; 
+  margin-top: 80px;
+  margin-right: 32px;
+}
+
+/* ============================================
+   NOTEBOOKS 1025px–1366px → caixa NÃO fica fixa
+============================================ */
+@media (min-width: 1025px) and (max-width: 1366px) {
+
+  .instructions-wrapper {
+    justify-content: center; /* centraliza se quiser */
+    margin-top: 40px;
+  }
+
+  .instructions-box {
+    position: static !important;   /* 🔥 remove o comportamento fixo */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 420px;
+
+    background: rgba(0, 0, 0, 0.55);
+    padding: 22px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+/* ====== TABLETS (entre 769px e 1024px) ====== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .instructions-box {
+    position: fixed;
+    right: 30px; 
+    top: 150px;
+
+    max-width: 280px;
+    width: 85%;
+
+    padding: 22px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  }
+}
 
 /* --------------------
       CREDITS
@@ -282,6 +444,9 @@ footer {
   padding: 1.5rem;
   margin-top: 3rem;
   color: #aaa;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* --------------------
@@ -289,7 +454,6 @@ footer {
 -------------------- */
 @media (max-width: 768px) {
 
-  /* botão do menu */
   .hamburger {
     display: block;
     font-size: 2rem;
@@ -315,14 +479,14 @@ footer {
 /* Telas médias (tablets) */
 @media (max-width: 1024px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 /* Telas pequenas (celulares) */
 @media (max-width: 600px) {
   .cards {
-    grid-template-columns: 1fr; /* 1 card por linha */
+    grid-template-columns: 1fr; 
   }
 }
 
@@ -334,9 +498,9 @@ footer {
   position: fixed;
   top: 50%;
   left: 0;
-  transform: translate(-28%, -50%); /* parte fora da tela */
+  transform: translate(-28%, -50%);
   width: 280px;
-  pointer-events: none; /* não atrapalha clique */
+  pointer-events: none; 
   z-index: 0;
   max-height: 80vh;
 }
@@ -392,10 +556,6 @@ footer {
   }
 }
 
-/* ============================
-   HERO
-============================ */
-
 * {
   margin: 0;
   padding: 0;
@@ -403,13 +563,16 @@ footer {
 }
 
 /* ------ Estrutura ------ */
-.hero .game-title {
-  z-index: 60; 
-  font-size: 5rem;
+.hero-content .game-title {
   font-family: 'Cinzel Decorative', serif;
   color: #090808;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 5.1rem;
+}
+
+.hero-content{
+  padding-top: clamp(4rem, 12vw, 8rem);
 }
 
 .hero {
@@ -445,27 +608,47 @@ footer {
     height: 75vh;
   }
 
-  .hero-content {
-      position: absolute;
-      z-index: 10; 
-  }
+.game-title {
+  font-size: 2.2rem;
+}
 
-  .hero-content p {
-    font-size: 1rem;
+.hero-content {
+  position: relative;
+  z-index: 10; 
+  padding-top:  6rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
   }
 }
 
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
 
-body {
-  color: #f5f5f5;
-  background: url("images/parallax/banner-bg.png") no-repeat center fixed;
-  background-size: cover;          /* ocupa a tela inteira */
-  background-attachment: fixed;    /* efeito parallax simples */
-  backdrop-filter: blur(0px);
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
+.parallax-layer.bg {
+  background-image: url("images/parallax/banner-bg.png");
   z-index: -3;
+}
+
+.parallax-layer.mid {
+  background-image: url("images/parallax/banner-mid.png");
+  opacity: 0.45;
+  z-index: -2;
+}
+
+.parallax-layer.front {
+  background-image: url("images/parallax/image.png");
+  opacity: 0.3;
+  z-index: -1;
 }
 
 
@@ -473,17 +656,14 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("images/parallax/banner-mid.png") no-repeat center;
   background-size: cover;
   opacity: 0.45;
-  z-index: -2;
 }
 
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("images/parallax/image.png") no-repeat center;
   background-size: cover;
   opacity: 0.3;
   z-index: -1;

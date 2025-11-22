@@ -14,15 +14,14 @@ function toggleMenu() {
 
 // PARALLAX DO BANNER
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", () => {
   const s = window.scrollY;
 
-  document.querySelectorAll(".layer").forEach(layer => {
+  document.querySelectorAll(".parallax-layer").forEach(layer => {
     const speed = layer.getAttribute("data-speed");
-    const translateY = scrollY * (speed / 100);
-    layer.style.transform = `translateY(${translateY}px)`;
+    const y = s * (speed / 200);
+    layer.style.transform = `translate3d(0, ${y}px, 0)`;
   });
-
 });
 
 // Ativar destaque no menu
