@@ -40,11 +40,11 @@
         <a href="#" onclick="showSection('inicio')">Início</a>
       </li>
       <li class="menu-item">
-        <img src="images/icones/tiro-icon.png" class="menu-icon" alt= "Ícone de Tiro">
-        <a href="#" onclick="showSection('sobre')">Créditos</a></li>
-      <li class="menu-item">
         <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
         <a href="#" onclick="showSection('Jogo')">Jogo</a></li>
+      <li class="menu-item">
+        <img src="images/icones/tiro-icon.png" class="menu-icon" alt= "Ícone de Tiro">
+        <a href="#" onclick="showSection('sobre')">Créditos</a></li>
     </ul>
   </div>
 
@@ -106,6 +106,41 @@
 </div>
 </section>
 
+<!-- ======================
+       PÁGINA DO JOGO
+====================== -->
+<section id="Jogo" class="page-game">
+  <div class="container">
+    <div class="game-container">
+      <p style="opacity:0.7">[ Área reservada para o WebGL ]</p>
+    </div>
+
+    <p class="descricao-jogo">Uma aventura mágica e sombria aguarda por você.</p>
+  </div>
+
+<div class="instructions-wrapper">
+
+  <div class="instructions-box">
+    <h3 class="instr-subtitle">Controles</h3>
+
+    <h4 class="instr-category">Movimentação</h4>
+    <ul class="instr-list">
+      <li><strong>W / ↑ </strong> – Pular</li>
+      <li><strong>A / ←</strong> – Mover para a esquerda</li>
+      <li><strong>D / →</strong> – Mover para a direita</li>
+      <li><strong>Joystick</strong> – Movimentar o personagem</li>
+    </ul>
+
+    <h4 class="instr-category">Ações</h4>
+    <ul class="instr-list">
+      <li><strong>Mouse</strong> – Mirar (segue a posição do cursor)</li>
+      <li><strong>Segurar botão esquerdo</strong> – Carregar a força do tiro</li>
+      <li><strong>Botão esquerdo do mouse</strong> – Atirar</li>
+    </ul>
+  </div>
+
+</div>
+</section>
 
 <!-- ======================
        PÁGINA DE CRÉDITOS
@@ -154,48 +189,22 @@
   </div>
 </section>
 
-<!-- ======================
-       PÁGINA DO JOGO
-====================== -->
-<section id="Jogo" class=page-game>
-  <div class="container">
-    <div class="game-container">
-      <p style="opacity:0.7">[ Área reservada para o WebGL ]</p>
-    </div>
-
-    <p class="descricao-jogo">Uma aventura mágica e sombria aguarda por você.</p>
-  </div>
-
-<div class="instructions-wrapper">
-
-  <div class="instructions-box">
-    <h3 class="instr-subtitle">Controles</h3>
-
-    <h4 class="instr-category">Movimentação</h4>
-    <ul class="instr-list">
-      <li><strong>W / ↑</strong> – Pular</li>
-      <li><strong>A / ←</strong> – Mover para a esquerda</li>
-      <li><strong>D / →</strong> – Mover para a direita</li>
-    </ul>
-
-    <h4 class="instr-category">Ações</h4>
-    <ul class="instr-list">
-      <li><strong>Mouse</strong> – Mirar</li>
-      <li><strong>Botão esquerdo do mouse</strong> – Atirar</li>
-    </ul>
-  </div>
-
-</div>
-
-</section>
-
 <footer id="suporte">
     <h3>Suporte</h3>
-    <p>💬 Atendimento: nylosupport@equipecontrole.com</p>
-    <p>⏰ Horário: Seg–Sex, 8h às 18h</p>
-    <p>❓ FAQ: <a href="#">Clique para acessar</a></p>
-    <p>⚙ Suporte técnico: <a href="#1">Abrir chamado</a></p>
+
+    <p>
+        💬⚙ Suporte técnico via formulário: 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4RjJ3oGOuxJQ1V4sD7vSxTDTXceePlN11r5aY5B2T-ipIug/viewform" target="_blank">Enviar solicitação</a>
+    </p>
+
+    <p>📅 Retornamos as mensagens em dias úteis: Seg a Sex — 08h às 18h (horário de Brasília)</p>
+
+    <p>
+        ❓ FAQ do Echoes:
+        <a href="https://github.com/PedrohenriqueNovaisNeves/frontEnd_siteGame/wiki/FAQ" target="_blank">Acessar FAQ</a>
+    </p>
 </footer>
+
 
 <script src="script.js"></script>
 </body>
