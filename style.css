@@ -3,8 +3,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -16,9 +16,6 @@ body {
   padding: 0;
 }
 
-main {
-  flex: 1;
-}
 body, p, li {
   line-height: 1.8;
 }
@@ -171,7 +168,6 @@ body, p, li {
   color: #F8AF4B;
 }
 
-/* Ícone menu mobile */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -295,7 +291,6 @@ h2 {
   max-width: 320px;
   width: 90%;
 
-  /* VISIBILIDADE MELHORADA */
   background: rgba(0, 0, 0, 0.65); 
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 18px;
@@ -378,7 +373,7 @@ h2 {
 }
 
 .controls-card {
-  max-height: 65vh;  /* evita subir demais */
+  max-height: 65vh;
   overflow-y: auto; 
   margin-top: 80px;
   margin-right: 32px;
@@ -390,16 +385,15 @@ h2 {
 @media (min-width: 1025px) and (max-width: 1366px) {
 
   .instructions-wrapper {
-    justify-content: center; /* centraliza se quiser */
+    justify-content: center;
     margin-top: 40px;
   }
 
   .instructions-box {
-    position: static !important;   /* 🔥 remove o comportamento fixo */
+    position: static !important;
     margin: 20px auto;
     width: 90%;
     max-width: 420px;
-
     background: rgba(0, 0, 0, 0.55);
     padding: 22px;
 
@@ -447,8 +441,31 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+  position: relative;
+  z-index: 9999;
 }
 
+footer a:link,
+footer a:visited {
+  color: #f7f3da;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #F8AF4B; 
+}
+
+footer a:active {
+  color: #F8AF4B;
+}
+
+@media (max-width: 768px) {
+  footer {
+    margin-top: 0.5rem;
+  }
+}
 /* --------------------
       RESPONSIVIDADE MOBILE
 -------------------- */
@@ -462,7 +479,7 @@ footer {
     border: none;
     cursor: pointer;
   }
-  /* hero */
+
   .hero {
     height: 75vh;
   }
@@ -510,6 +527,7 @@ footer {
   width: 100%;
   height: auto;
   filter: drop-shadow(0 0 10px rgba(255,255,255,0.25));
+  display: block;  
 }
 
 /* Brilho nos olhos */
