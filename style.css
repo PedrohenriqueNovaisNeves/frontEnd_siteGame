@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,12 +19,6 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: #050a0a;
-}
-
-/* Garante que o body só ocupe o espaço necessário */
-html, body {
-  /*height: 100%;*/
-  overflow-x: hidden;
 }
 
 /* Impede que o conteúdo extrapole */
