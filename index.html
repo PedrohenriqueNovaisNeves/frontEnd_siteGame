@@ -1,208 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<link rel="icon" type="image/png" sizes="16x16" href="images/icones/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icones/favicon-32x32.png">
-<link rel="icon"  type="image/x-icon" href="images/icones/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="images/icones/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="images/icones/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="images/icones/android-chrome-512x512.png">
-<link rel="manifest" href="/site.webmanifest"> 
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icones/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icones/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="images/icones/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icones/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icones/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/icones/android-chrome-512x512.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nylo Echoes of the Forest</title>
+  <title>Nylo Echoes of the Forest</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div class="parallax-layer bg" data-speed="10"></div>
-<div class="parallax-layer mid" data-speed="25"></div>
-<div class="parallax-layer front" data-speed="40"></div>
+  <div class="parallax-layer bg" data-speed="10"></div>
+  <div class="parallax-layer mid" data-speed="25"></div>
+  <div class="parallax-layer front" data-speed="40"></div>
 
-<!-- ============================
+  <!-- ============================
      PERSONAGEM NA LATERAL ESQUERDA
 ============================= -->
-<div class="creature-left wind-effect">
-  <img src="images/personagem-lateral.png" alt="criatura-lateral-esquerda"> 
-</div>
-
-<nav class="navbar">
-  <div class="navbar-container">
-
-    <ul class="nav-links">
-      <li class="menu-item active">
-        <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
-        <a href="#" onclick="showSection('inicio')">Início</a>
-      </li>
-      <li class="menu-item">
-        <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
-        <a href="#" onclick="showSection('Jogo')">Jogo</a></li>
-      <li class="menu-item">
-        <img src="images/icones/tiro-icon.png" class="menu-icon" alt= "Ícone de Tiro">
-        <a href="#" onclick="showSection('sobre')">Créditos</a></li>
-    </ul>
+  <div class="creature-left wind-effect">
+    <img src="images/personagem-lateral.png" alt="criatura-lateral-esquerda">
   </div>
 
-  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
-    ☰
-  </button>
-</nav>
+  <nav class="navbar">
+    <div class="navbar-container">
 
-<section id="inicio" class="active">
-  <div class="hero-content">
-    <h1 class="game-title">Nylo Echoes of the Forest</h1>
-  </div>
-
-<!-- Sobre -->
-<div class="container">
-  <h2>Sobre o Jogo</h2>
-  <p class="descricao-jogo">
-    Nylo Echoes of the Forest é um jogo de plataforma em que você controla Nylo, uma criatura das sombras 
-    perdido em uma floresta misteriosa e mágica. Supere obstáculos e avance por diferentes cenários enquanto desvenda a história oculta da floresta.
-  </p>
-</div>
-
-<!-- Cards -->
-<div class="container">
-  <h2>Características</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>🌑 Atmosfera Única</h3>
-      <p>Visual inspirado em luz e sombra.</p>
+      <ul class="nav-links">
+        <li class="menu-item active">
+          <a href="#" onclick="showSection('inicio')">
+            <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
+            Início
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#" onclick="showSection('Jogo')">
+            <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
+            Jogo
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="#" onclick="showSection('sobre')">
+            <img src="images/icones/tiro-icon.png" class="menu-icon" alt="Ícone de Tiro">
+            Créditos
+          </a>
+        </li>
+      </ul>
     </div>
 
-    <div class="card">
-      <h3>🎮 Jogabilidade Intuitiva</h3>
-      <p>Controles simples para qualquer jogador.</p>
+    <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      ☰
+    </button>
+  </nav>
+
+  <section id="inicio" class="active">
+    <div class="hero-content">
+      <h1 class="game-title">Nylo Echoes of the Forest</h1>
     </div>
 
-    <div class="card">
-      <h3>🧩 Desafios Criativos</h3>
-      <p>Plataformas, e obstáculos interativos.</p>
+    <!-- Sobre -->
+    <div class="container">
+      <h2>Sobre o Jogo</h2>
+      <p class="descricao-jogo">
+        Nylo Echoes of the Forest é um jogo de plataforma em que você controla Nylo, uma criatura das sombras
+        perdido em uma floresta misteriosa e mágica. Supere obstáculos e avance por diferentes cenários enquanto
+        desvenda a história oculta da floresta.
+      </p>
     </div>
 
-    <div class="card">
-      <h3>🖼 Estética Fascinante</h3>
-      <p>Arte inspirada em natureza e fantasia.</p>
+    <!-- Cards -->
+    <div class="container">
+      <h2>Características</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🌑 Atmosfera Única</h3>
+          <p>Visual inspirado em luz e sombra.</p>
+        </div>
+
+        <div class="card">
+          <h3>🎮 Jogabilidade Intuitiva</h3>
+          <p>Controles simples para qualquer jogador.</p>
+        </div>
+
+        <div class="card">
+          <h3>🧩 Desafios Criativos</h3>
+          <p>Plataformas, e obstáculos interativos.</p>
+        </div>
+
+        <div class="card">
+          <h3>🖼 Estética Fascinante</h3>
+          <p>Arte inspirada em natureza e fantasia.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Galeria -->
-<div class="container">
-  <h2>Imagens</h2>
+    <!-- Galeria -->
+    <div class="container">
+      <h2>Imagens</h2>
 
-  <div class="gallery">
-    <img src="images/game-scenes/scene1.png" alt="Cena do jogo">
-    <img src="images/game-scenes/scene2.png" alt="Cena do jogo">
-    <img src="images/game-scenes/scene3.png" alt="Cena do jogo">
-  </div>
-</div>
-</section>
+      <div class="gallery">
+        <img src="images/game-scenes/scene1.png" alt="Cena do jogo">
+        <img src="images/game-scenes/scene2.png" alt="Cena do jogo">
+        <img src="images/game-scenes/scene3.png" alt="Cena do jogo">
+      </div>
+    </div>
+  </section>
 
-<!-- ======================
+  <!-- ======================
        PÁGINA DO JOGO
 ====================== -->
-<section id="Jogo" class="page-game">
-  <div class="container">
-    <div class="game-container">
-      <p style="opacity:0.7">[ Área reservada para o WebGL ]</p>
+  <section id="Jogo" class="page-game">
+    <div class="container">
+      <div class="game-container">
+        <p style="opacity:0.7">[ Área reservada para o WebGL ]</p>
+      </div>
+
+      <p class="descricao-jogo">Uma aventura mágica e sombria aguarda por você.</p>
     </div>
 
-    <p class="descricao-jogo">Uma aventura mágica e sombria aguarda por você.</p>
-  </div>
+    <div class="instructions-wrapper">
 
-<div class="instructions-wrapper">
+      <div class="instructions-box">
+        <h3 class="instr-subtitle">Controles</h3>
 
-  <div class="instructions-box">
-    <h3 class="instr-subtitle">Controles</h3>
+        <h4 class="instr-category">Movimentação</h4>
+        <ul class="instr-list">
+          <li><strong>W / ↑ </strong> – Pular</li>
+          <li><strong>A / ←</strong> – Mover para a esquerda</li>
+          <li><strong>D / →</strong> – Mover para a direita</li>
+          <li><strong>Joystick</strong> – Movimentar o personagem</li>
+        </ul>
 
-    <h4 class="instr-category">Movimentação</h4>
-    <ul class="instr-list">
-      <li><strong>W / ↑ </strong> – Pular</li>
-      <li><strong>A / ←</strong> – Mover para a esquerda</li>
-      <li><strong>D / →</strong> – Mover para a direita</li>
-      <li><strong>Joystick</strong> – Movimentar o personagem</li>
-    </ul>
+        <h4 class="instr-category">Ações</h4>
+        <ul class="instr-list">
+          <li><strong>Mouse</strong> – Mirar (segue a posição do cursor)</li>
+          <li><strong>Segurar botão esquerdo</strong> – Carregar a força do tiro</li>
+          <li><strong>Botão esquerdo do mouse</strong> – Atirar</li>
+        </ul>
+      </div>
 
-    <h4 class="instr-category">Ações</h4>
-    <ul class="instr-list">
-      <li><strong>Mouse</strong> – Mirar (segue a posição do cursor)</li>
-      <li><strong>Segurar botão esquerdo</strong> – Carregar a força do tiro</li>
-      <li><strong>Botão esquerdo do mouse</strong> – Atirar</li>
-    </ul>
-  </div>
+    </div>
+  </section>
 
-</div>
-</section>
-
-<!-- ======================
+  <!-- ======================
        PÁGINA DE CRÉDITOS
 ====================== -->
-<section id="sobre">
-  <div class="container">
-    <h1>Créditos & Equipe</h1>
-    <p>Integrantes responsáveis pelo projeto:</p>
+  <section id="sobre">
+    <div class="container">
+      <h1>Créditos & Equipe</h1>
+      <p>Integrantes responsáveis pelo projeto:</p>
 
-    <div class="cards credits">
-      <div class="card">
-        <h3>Bruno Urccella Wiss</h3>
-        <h3>Danilo Silva D'Elia</h3>
-        <p><strong>Função:</strong> Gamer Developers</p>
-      </div>
+      <div class="cards credits">
+        <div class="card">
+          <h3>Bruno Urccella Wiss</h3>
+          <h3>Danilo Silva D'Elia</h3>
+          <p><strong>Função:</strong> Gamer Developers</p>
+        </div>
 
-      <div class="card">
-        <h3>Lucas de Albuquerque Santos</h3>
-        <h3>Gustavo Furnari da Silva</h3>
-        <p><strong>Função:</strong> UX & UI Designers</p>
-      </div>
+        <div class="card">
+          <h3>Lucas de Albuquerque Santos</h3>
+          <h3>Gustavo Furnari da Silva</h3>
+          <p><strong>Função:</strong> UX & UI Designers</p>
+        </div>
 
-      <div class="card">
-        <h3>Ellen Cristine do Vale Cruz</h3>
-        <h3>Pedro Henrique Novais Neves</h3>
-        <p><strong>Função:</strong> Front-End Developers</p>
-      </div>
+        <div class="card">
+          <h3>Ellen Cristine do Vale Cruz</h3>
+          <h3>Pedro Henrique Novais Neves</h3>
+          <p><strong>Função:</strong> Front-End Developers</p>
+        </div>
 
-      <div class="card">
-        <h3>Juan Julio Deodato</h3>
-        <h3>Sérgio Borges da Silva</h3>
-        <p><strong>Função:</strong> Testers</p>
+        <div class="card">
+          <h3>Juan Julio Deodato</h3>
+          <h3>Sérgio Borges da Silva</h3>
+          <p><strong>Função:</strong> Testers</p>
+        </div>
       </div>
+      <br>
+      <h2>Tecnologias Utilizadas</h2>
+      <ul class="tech-list">
+        <li>Unity / WebGL</li>
+        <li>HTML, CSS e JavaScript</li>
+      </ul>
+      <h2>Abordagens e Boas Práticas</h2>
+      <ul class="tech-list">
+        <li>Design responsivo</li>
+        <li>Princípios de Usabilidade de Nielsen</li>
+      </ul>
     </div>
-    <br>
-    <h2>Tecnologias Utilizadas</h2>
-    <ul class="tech-list">
-      <li>Unity / WebGL</li>
-      <li>HTML, CSS e JavaScript</li>
-    </ul>
-    <h2>Abordagens e Boas Práticas</h2>
-  <ul class="tech-list">
-    <li>Design responsivo</li>
-    <li>Princípios de Usabilidade de Nielsen</li>
-  </ul>
-  </div>
-</section>
+  </section>
 
-<footer id="suporte">
+  <footer id="suporte">
     <h3>Suporte</h3>
     <p>
-        💬⚙ Suporte técnico via formulário: 
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4RjJ3oGOuxJQ1V4sD7vSxTDTXceePlN11r5aY5B2T-ipIug/viewform" target="_blank">Enviar solicitação</a>
+      💬⚙ Suporte técnico via formulário:
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe4RjJ3oGOuxJQ1V4sD7vSxTDTXceePlN11r5aY5B2T-ipIug/viewform"
+        target="_blank">Enviar solicitação</a>
     </p>
 
     <p>📅 Retornamos as mensagens em dias úteis: Seg a Sex — 08h às 18h (horário de Brasília)</p>
 
     <p>
-        ❓ FAQ do Echoes:
-        <a href="https://github.com/PedrohenriqueNovaisNeves/frontEnd_siteGame/wiki/FAQ" target="_blank">Acessar FAQ</a>
+      ❓ FAQ do Echoes:
+      <a href="https://github.com/PedrohenriqueNovaisNeves/frontEnd_siteGame/wiki/FAQ" target="_blank">Acessar FAQ</a>
     </p>
-</footer>
-<script src="script.js"></script>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>

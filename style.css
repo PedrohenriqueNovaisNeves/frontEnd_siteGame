@@ -8,12 +8,27 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  min-height: auto !important;
+  height: auto;
   color: #f5f5f5;
   backdrop-filter: blur(0px);
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  background-color: #050a0a;
+}
+
+/* Garante que o body só ocupe o espaço necessário */
+html, body {
+  /*height: 100%;*/
+  overflow-x: hidden;
+}
+
+/* Impede que o conteúdo extrapole */
+#suporte {
+  margin-bottom: 0 !important;
 }
 
 body, p, li {
@@ -128,6 +143,12 @@ body, p, li {
     0 0 4px rgba(255, 255, 200, 0.5),
     0 0 8px rgba(255, 255, 200, 0.2);
   transform: scale(1.04);
+}
+
+.menu-icon {
+   width: 24px;     
+  height: 24px;
+  vertical-align: middle;
 }
 
 .menu-item:hover,
